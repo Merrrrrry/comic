@@ -31,7 +31,7 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
         self.message(true); // You win!
       }
     }
-
+    self.message(true); // You win!
   });
 };
 
@@ -130,6 +130,7 @@ HTMLActuator.prototype.message = function (won) {
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
+  this.messageContainer.getElementsByTagName("img")[0].src = "../img/mit.jpg";
 };
 
 HTMLActuator.prototype.clearMessage = function () {
