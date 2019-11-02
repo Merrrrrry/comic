@@ -23,7 +23,8 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
 
     self.updateScore(metadata.score);
     self.updateBestScore(metadata.bestScore);
-
+    metadata.terminated = true;
+    metadata.over = true;
     if (metadata.terminated) {
       if (metadata.over) {
         self.message(false); // You lose
