@@ -25,10 +25,13 @@
     <p class="game-intro">Combine other comics to reach the <span onclick="document.body.style.background='url(img/petey.png)';">final almighty <strong>Double Chins!</strong></span></p>
 
     <div class="game-container">
+      <div class="mask-message">
+
+      </div>
       <div class="game-message">
         <p></p>
+        <img src="">
         <div class="lower">
-          <img src="" alt="">
 	        <a class="keep-playing-button">Keep going</a>
           <a class="retry-button">Try again</a>
         </div>
@@ -67,8 +70,8 @@
     </div>
 
     <p class="game-explanation">
-      <strong class="important">How to play:</strong><strong>Slides</strong> to move the comics. When the same comic touch, they <strong>merge into another!</strong>
-      <br><strong class="important">Note:</strong> The comics is ordered by the time.
+      <strong class="important">How to play:</strong><strong>Slide</strong> to move the comics. When the same comic touch, they <strong>merge into another!</strong>
+      <br><strong class="important">Note:</strong>The comics is ordered by the time.
     </p>
     <hr>
     <p>
@@ -77,7 +80,9 @@
     <hr>
     <p>
       The 11th(2048) comic is the <strong> Hidden awesome one</strong>!
-      <strong>Enjoy it!</strong>
+    </p>
+    <p>
+      <span onclick="log()"><strong>Enjoy it!</strong></span>
     </p>
   </div>
 
@@ -89,5 +94,11 @@
   <script src="js/local_score_manager.js"></script>
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script>
+<script>
+  function log(){
+    this.maskContainer = document.querySelector(".mask-message");
+    this.messageContainer.classList.add(type);
+  }
+  </script>
 </body>
 </html>
