@@ -1,104 +1,109 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>GetComic!</title>
+    <meta charset="utf-8">
+    <title>GetComic!</title>
 
-  <link href="style/main.css" rel="stylesheet" type="text/css">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport"
+          content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 <body>
-  <div class="container">
+<div class="container">
     <div class="heading">
-      <h1 class="title">GetComic</h1>
-      <div class="scores-container">
-        <div class="score-container">0</div>
-        <div class="best-container">0</div>
-      </div>
+        <h1 class="title">GetComic</h1>
+        <div class="scores-container">
+            <div class="score-container">0</div>
+            <div class="best-container">0</div>
+        </div>
     </div>
-    <p class="game-intro">Combine other comics to reach the <span onclick="document.body.style.background='url(img/petey.png)';">final almighty <strong>Double Chins!</strong></span></p>
+    <p class="game-intro">Combine other comics to reach the <span
+            onclick="document.body.style.background='url(img/background.gif)';">final almighty <strong>Double Chins!</strong></span>
+    </p>
 
     <div class="game-container">
-      <div class="mask-message">
+        <div class="game-message">
+            <p></p>
+            <span></span>
+            <img src="" width="200">
+            <div class="lower">
+                <a class="keep-playing-button">Keep going</a>
+                <a class="retry-button">Try again</a>
+                <a class="sure" >Sure</a>
+                <a class="reject">Reject</a>
+            </div>
+        </div>
 
-      </div>
-      <div class="game-message">
-        <p></p>
-        <img src="">
-        <div class="lower">
-	        <a class="keep-playing-button">Keep going</a>
-          <a class="retry-button">Try again</a>
+        <div class="grid-container">
+            <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
         </div>
-      </div>
 
-      <div class="grid-container">
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-      </div>
+        <div class="tile-container">
 
-      <div class="tile-container">
-
-      </div>
+        </div>
     </div>
 
     <p class="game-explanation">
-      <strong class="important">How to play:</strong><strong>Slide</strong> to move the comics. When the same comic touch, they <strong>merge into another!</strong>
-      <br><strong class="important">Note:</strong>The comics is ordered by the time.
+        <strong class="important">How to play:</strong><strong>Slide</strong> to move the comics. When the same comic
+        touch, they <strong>merge into another!</strong>
+        <br><strong class="important">Note:</strong>The comics is ordered by the time.
     </p>
     <hr>
     <p>
-    This is the comic version of GetMIT(created by <a href="http://web.mit.edu/mitchgu/www">Mitchell Gu</a>).
+        This is the comic version of GetMIT(created by <a href="http://web.mit.edu/mitchgu/www">Mitchell Gu</a>).
     </p>
     <hr>
     <p>
-      The 11th(2048) comic is the <strong> Hidden awesome one</strong>!
+        The 11th(2048) comic is the <strong> Hidden awesome one</strong>!
     </p>
     <p>
-      <span onclick="log()"><strong>Enjoy it!</strong></span>
+        <span onclick="log()"><strong>Enjoy it!</strong></span>
     </p>
-  </div>
+</div>
 
-  <script src="js/animframe_polyfill.js"></script>
-  <script src="js/keyboard_input_manager.js"></script>
-  <script src="js/html_actuator.js"></script>
-  <script src="js/grid.js"></script>
-  <script src="js/tile.js"></script>
-  <script src="js/local_score_manager.js"></script>
-  <script src="js/game_manager.js"></script>
-  <script src="js/application.js"></script>
+<script src="js/animframe_polyfill.js"></script>
+<script src="js/keyboard_input_manager.js"></script>
+<script src="js/html_actuator.js"></script>
+<script src="js/grid.js"></script>
+<script src="js/tile.js"></script>
+<script src="js/local_score_manager.js"></script>
+<script src="js/game_manager.js"></script>
+<script src="js/application.js"></script>
 <script>
-  function log(){
-    this.maskContainer = document.querySelector(".mask-message");
-    this.messageContainer.classList.add(type);
-  }
-  </script>
+    function log() {
+        this.messageContainer = document.querySelector(".game-message");
+        this.messageContainer.classList.add("uncover");
+        this.messageContainer.getElementsByTagName("p")[0].textContent = "cover is awful?";
+    }
+</script>
 </body>
 </html>
