@@ -157,4 +157,5 @@ HTMLActuator.prototype.clearMessage = function () {
     this.messageContainer.classList.remove("game-over");
     this.messageContainer.classList.remove("uncover");
     this.messageContainer.getElementsByTagName("img")[0].src = "";
+    this.messageContainer.getElementsByTagName("span")[0].textContent = "";
 };
