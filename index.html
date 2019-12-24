@@ -14,17 +14,17 @@
     <meta name="viewport"
           content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
-<body>
+<body background="url(img/background.gif)">
 <div class="container">
     <div class="heading">
-        <h1 class="title">GetComic</h1>
+        <h1 class="title">Merry Merry Christmas！</h1>
         <div class="scores-container">
             <div class="score-container">0</div>
             <div class="best-container">0</div>
         </div>
     </div>
     <p class="game-intro">Combine other comics to reach the <span
-            onclick="document.body.style.background='url(img/background.gif)';">final almighty <strong>Double Chins!</strong></span>
+            onclick="document.body.style.background='url(img/background.gif)';">final almighty <strong>Merry!</strong></span>
     </p>
 
     <div class="game-container">
@@ -35,8 +35,8 @@
             <div class="lower">
                 <a class="keep-playing-button">Keep going</a>
                 <a class="retry-button">Try again</a>
-                <a class="sure" >Sure</a>
-                <a class="reject">Reject</a>
+                <a class="sure" >Thanks</a>
+                <!--<a class="reject">Reject</a>-->
             </div>
         </div>
 
@@ -86,7 +86,7 @@
         The 11th(2048) comic is the <strong> Hidden awesome one</strong>!
     </p>
     <p>
-        <span onclick="log()"><strong>Enjoy it!</strong></span>
+        <span onclick="log()"><strong>It's Merry!</strong></span>
     </p>
 </div>
 
@@ -99,10 +99,12 @@
 <script src="js/game_manager.js"></script>
 <script src="js/application.js"></script>
 <script>
+
     function log() {
         this.messageContainer = document.querySelector(".game-message");
         this.messageContainer.classList.add("uncover");
-        this.messageContainer.getElementsByTagName("p")[0].textContent = "cover is awful?";
+        this.messageContainer.getElementsByTagName("p")[0].textContent = "Merry's Christmas";
+        this.messageContainer.getElementsByTagName("img")[0].src = "./img/ball.gif";
     }
 </script>
 </body>

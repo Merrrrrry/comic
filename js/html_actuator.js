@@ -134,17 +134,33 @@ HTMLActuator.prototype.message = function (won) {
 
 HTMLActuator.prototype.onSureClick = function (count) {
     if (count == 0) {
-        this.messageContainer.getElementsByTagName("p")[0].textContent = "f**k you";
-        this.messageContainer.getElementsByTagName("img")[0].src = "./img/fight.gif";
+        this.messageContainer.getElementsByTagName("p")[0].textContent = "Merry with 猫猫！";
+        this.messageContainer.getElementsByTagName("img")[0].src = "./img/3.jpg";
+        this.messageContainer.getElementsByTagName("a")[2].textContent = "Cute";
     }
     if (count == 1) {
-        this.messageContainer.getElementsByTagName("p")[0].textContent = "欧拉!";
-        this.messageContainer.getElementsByTagName("img")[0].src = "./img/fight2.gif";
+        this.messageContainer.getElementsByTagName("p")[0].textContent = "Merry with 鹿鹿！";
+        this.messageContainer.getElementsByTagName("img")[0].src = "./img/5.jpg";
+        this.messageContainer.getElementsByTagName("a")[2].textContent = "Cuter";
+
     }
     if (count == 2){
-        this.messageContainer.getElementsByTagName("p")[0].textContent = "Oops!";
+        this.messageContainer.getElementsByTagName("p")[0].textContent = "";
         this.messageContainer.getElementsByTagName("img")[0].src = "";
-        this.messageContainer.getElementsByTagName("span")[0].textContent = "Error! Too beautiful to show!";
+        this.messageContainer.getElementsByTagName("span")[0].textContent = "Everyone Loves Christmas!";
+        this.messageContainer.getElementsByTagName("a")[2].textContent = "Yes";
+    }
+    if (count == 3){
+        this.messageContainer.getElementsByTagName("span")[0].textContent = "Everyone Loves Merry Christmas!";
+        this.messageContainer.getElementsByTagName("a")[2].textContent = "Yes";
+    }
+    if (count ==7) {
+        this.messageContainer.getElementsByTagName("span")[0].textContent = "Cy Loves Merry Only";
+        this.messageContainer.getElementsByTagName("a")[2].textContent = "Sure";
+    }
+    if (count ==20){
+        this.messageContainer.getElementsByTagName("span")[0].textContent = "It's not a joke";
+        this.messageContainer.getElementsByTagName("a")[2].textContent = "Thank You";
     }
     count = count + 1;
     return count;
