@@ -32,6 +32,8 @@ GameManager.prototype.sure = function () {
     console.log(this.count);
     this.keepPlaying = true;
     this.count = this.actuator.onSureClick(this.count);
+    if (this.count>=50)
+        this.actuator.continue();
 };
 
 GameManager.prototype.reject = function () {

@@ -147,20 +147,20 @@ HTMLActuator.prototype.onSureClick = function (count) {
     if (count == 2){
         this.messageContainer.getElementsByTagName("p")[0].textContent = "";
         this.messageContainer.getElementsByTagName("img")[0].src = "";
-        this.messageContainer.getElementsByTagName("span")[0].textContent = "Everyone Loves Christmas!";
-        this.messageContainer.getElementsByTagName("a")[2].textContent = "Yes";
-    }
-    if (count == 3){
         this.messageContainer.getElementsByTagName("span")[0].textContent = "Everyone Loves Merry Christmas!";
         this.messageContainer.getElementsByTagName("a")[2].textContent = "Yes";
     }
+    if (count == 3){
+        this.messageContainer.getElementsByTagName("span")[0].textContent = "And Everyone Loves Christmas!";
+        this.messageContainer.getElementsByTagName("a")[2].textContent = "Yes";
+    }
     if (count ==7) {
-        this.messageContainer.getElementsByTagName("span")[0].textContent = "Cy Loves Merry Only";
+        this.messageContainer.getElementsByTagName("span")[0].textContent = "But Cy Loves Merry Only";
         this.messageContainer.getElementsByTagName("a")[2].textContent = "Sure";
     }
     if (count ==20){
         this.messageContainer.getElementsByTagName("span")[0].textContent = "It's not a joke";
-        this.messageContainer.getElementsByTagName("a")[2].textContent = "Thank You";
+        this.messageContainer.getElementsByTagName("a")[2].textContent = "Agree";
     }
     count = count + 1;
     return count;
