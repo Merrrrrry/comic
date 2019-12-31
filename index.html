@@ -36,7 +36,7 @@
                 <a class="keep-playing-button">Keep going</a>
                 <a class="retry-button">Try again</a>
                 <a class="sure" >Thanks</a>
-                <!--<a class="reject">Reject</a>-->
+                <a class="reject">Reject</a>
             </div>
         </div>
 
@@ -88,6 +88,9 @@
     <p>
         <span onclick="log()"><strong>It's Merry!</strong></span>
     </p>
+    <p>
+        <span class="new-year"><strong>Happy New Year!</strong></span>
+    </p>
 </div>
 
 <script src="js/animframe_polyfill.js"></script>
@@ -99,12 +102,14 @@
 <script src="js/game_manager.js"></script>
 <script src="js/application.js"></script>
 <script>
-
     function log() {
         this.messageContainer = document.querySelector(".game-message");
         this.messageContainer.classList.add("uncover");
-        this.messageContainer.getElementsByTagName("p")[0].textContent = "Merry's Christmas";
+        this.messageContainer.getElementsByTagName("p")[0].textContent = "Happy New Year!";
+        this.messageContainer.getElementsByTagName("span")[0].textContent = "Bonus:Which cy prefer?";
         this.messageContainer.getElementsByTagName("img")[0].src = "./img/ball.gif";
+        this.messageContainer.getElementsByTagName("a")[2].textContent = "蔡煜～";
+        this.messageContainer.getElementsByTagName("a")[3].textContent = "煜煜～";
     }
 </script>
 </body>

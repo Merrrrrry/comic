@@ -11,6 +11,7 @@ function GameManager(size, InputManager, Actuator, ScoreManager) {
     this.inputManager.on("keepPlaying", this.keepPlaying.bind(this));
     this.inputManager.on("sure", this.sure.bind(this));
     this.inputManager.on("reject", this.reject.bind(this));
+    this.inputManager.on("newYear", this.newYear.bind(this));
 
 
     this.setup();
@@ -42,12 +43,29 @@ GameManager.prototype.reject = function () {
     this.actuator.continue();
 };
 
+GameManager.prototype.newYear = function () {
+    this.grid = new Grid(this.size);
+
+    this.score = 2020;
+    this.over = false;
+    this.won = false;
+    this.keepPlaying = false;
+
+    // Add the initial tiles
+    this.goodTitles();
+    //this.goodTitles()
+    // Update the actuator
+    this.actuator.inputContainer.classList.add("new-year-click");
+    //this.actuate();
+};
+
 GameManager.prototype.isGameTerminated = function () {
-    if (this.over || (this.won && !this.keepPlaying)) {
-        return true;
-    } else {
-        return false;
-    }
+    // if (this.over || (this.won && !this.keepPlaying)) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+    return false;
 };
 
 // Set up the game
@@ -61,7 +79,7 @@ GameManager.prototype.setup = function () {
 
     // Add the initial tiles
     this.addStartTiles();
-
+    //this.goodTitles()
     // Update the actuator
     this.actuate();
 };
@@ -71,6 +89,15 @@ GameManager.prototype.addStartTiles = function () {
     for (var i = 0; i < this.startTiles; i++) {
         this.addRandomTile();
     }
+};
+
+GameManager.prototype.goodTitles = function (){
+    var r = [[8,4,2,2],[16,32,64,128],[2048,1024,512,256],[4096,8192,16384,32768]];
+    for(var i=0; i<this.size;i++)
+        for (var j=0;j<this.size;j++){
+            var tile = new Tile({x:i,y:j},r[this.size-1-i][j]);
+            this.grid.insertTile(tile);
+        }
 };
 
 // Adds a tile in a random position

@@ -65,9 +65,9 @@ KeyboardInputManager.prototype.listen = function () {
     sure.addEventListener("click", this.sure.bind(this));
     sure.addEventListener("touchend", this.sure.bind(this));
 
-    // var reject = document.querySelector(".reject");
-    // reject.addEventListener("click", this.reject.bind(this));
-    // reject.addEventListener("touchend", this.reject.bind(this));
+    var reject = document.querySelector(".reject");
+    reject.addEventListener("click", this.reject.bind(this));
+    reject.addEventListener("touchend", this.reject.bind(this));
 
     // Listen to swipe events
     var touchStartClientX, touchStartClientY;
@@ -114,6 +114,11 @@ KeyboardInputManager.prototype.keepPlaying = function (event) {
 KeyboardInputManager.prototype.sure = function (event) {
     event.preventDefault();
     this.emit("sure");
+};
+
+KeyboardInputManager.prototype.newYear = function (event) {
+    event.preventDefault();
+    this.emit("newYear");
 };
 
 KeyboardInputManager.prototype.reject = function (event) {

@@ -797,9 +797,15 @@ hr {
     }
 
 
-    .game-container .game-message.game-won, .game-container .game-message.game-over,.game-container .game-message.uncover{
+    .game-container .game-message.game-won, .game-container .game-message.game-over,.game-container .game-input.new-year-click,.game-container .game-message.uncover{
         display: block;
     }
+
+
+
+
+
+
 
     .grid-container {
         position: absolute;
