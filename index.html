@@ -17,7 +17,7 @@
 <body background="url(img/background.gif)">
 <div class="container">
     <div class="heading">
-        <h1 class="title">Merry Merry Christmas！</h1>
+        <h1 class="title">Merry Happy New Year！</h1>
         <div class="scores-container">
             <div class="score-container">0</div>
             <div class="best-container">0</div>
@@ -89,7 +89,7 @@
         <span onclick="log()"><strong>It's Merry!</strong></span>
     </p>
     <p>
-        <span class="new-year"><strong>Happy New Year!</strong></span>
+        <span onclick="warning()" class="new-year"><strong>Happy New Year!</strong></span>
     </p>
 </div>
 
@@ -103,13 +103,18 @@
 <script src="js/application.js"></script>
 <script>
     function log() {
+        alert("警告：检测到当前页面在执行恶意脚本，点击确定安装360手机助手");
+        alert("警告：检测到当前页面在执行恶意脚本，点击确定安装cy手机助手");
         this.messageContainer = document.querySelector(".game-message");
         this.messageContainer.classList.add("uncover");
         this.messageContainer.getElementsByTagName("p")[0].textContent = "Happy New Year!";
         this.messageContainer.getElementsByTagName("span")[0].textContent = "Bonus:Which cy prefer?";
-        this.messageContainer.getElementsByTagName("img")[0].src = "./img/ball.gif";
+        this.messageContainer.getElementsByTagName("img")[0].src = "./img/newYear.gif";
         this.messageContainer.getElementsByTagName("a")[2].textContent = "蔡煜";
         this.messageContainer.getElementsByTagName("a")[3].textContent = "煜煜";
+    }
+    function warning(){
+        alert("警告：检测到当前页面在执行恶意脚本，点击确定安装360手机助手");
     }
 </script>
 </body>

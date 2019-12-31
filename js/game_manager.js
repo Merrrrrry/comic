@@ -33,16 +33,21 @@ GameManager.prototype.sure = function () {
     console.log(this.count);
     this.keepPlaying = true;
     this.count = this.actuator.onSureClick(this.count,"蔡煜");
-    if (this.count>=2)
+    if (this.count>=2) {
+        this.count =0;
+        this.newYear();
         this.actuator.continue();
+    }
 };
 
 GameManager.prototype.reject = function () {
-    this.count = 0;
     this.keepPlaying = true;
     this.count = this.actuator.onSureClick(this.count,'煜煜');
-    if (this.count>=2)
+    if (this.count>=2) {
+        this.count =0;
+        this.newYear();
         this.actuator.continue();
+    }
 };
 
 GameManager.prototype.newYear = function () {
@@ -57,17 +62,17 @@ GameManager.prototype.newYear = function () {
     this.goodTitles();
     //this.goodTitles()
     // Update the actuator
-    this.actuator.inputContainer.classList.add("new-year-click");
-    //this.actuate();
+    this.actuate();
 };
 
 GameManager.prototype.isGameTerminated = function () {
-    // if (this.over || (this.won && !this.keepPlaying)) {
-    //     return true;
-    // } else {
-    //     return false;
-    // }
-    return false;
+    if (this.over || (this.won && !this.keepPlaying)) {
+    // if (this.over) {
+        return true;
+    } else {
+        return false;
+    }
+    // return false;
 };
 
 // Set up the game
@@ -111,6 +116,13 @@ GameManager.prototype.addRandomTile = function () {
         this.grid.insertTile(tile);
     }
 };
+
+GameManager.prototype.addTopTile = function (){
+    if (this.grid.topCellsAvailable()===1) {
+        var tile = new Tile(this.grid.randomAvailableCell(), 65536);
+        this.grid.insertTile(tile);
+    }
+}
 
 // Sends the updated grid to the actuator
 GameManager.prototype.actuate = function () {
@@ -205,7 +217,7 @@ GameManager.prototype.move = function (direction) {
 
     if (moved) {
         this.addRandomTile();
-
+        this.addTopTile();
         if (!this.movesAvailable()) {
             this.over = true; // Game over!
         }

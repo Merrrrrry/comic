@@ -55,7 +55,7 @@ HTMLActuator.prototype.addTile = function (tile) {
     // We can't use classlist because it somehow glitches when replacing classes
     var classes = ["tile", "tile-" + tile.value, positionClass];
 
-    if (tile.value > 2048) classes.push("tile-super");
+    if (tile.value > 65536) classes.push("tile-super");
 
     this.applyClasses(wrapper, classes);
 
@@ -134,9 +134,9 @@ HTMLActuator.prototype.message = function (won) {
 
 HTMLActuator.prototype.onSureClick = function (count,type) {
 
-        this.messageContainer.getElementsByTagName("p")[0].textContent = "恭喜！就是"+type;
+        this.messageContainer.getElementsByTagName("p")[0].textContent = "猜对啦！就是"+type;
         this.messageContainer.getElementsByTagName("img")[0].src = "";
-        this.messageContainer.getElementsByTagName("span")[0].textContent = "新年快乐！";
+        this.messageContainer.getElementsByTagName("span")[0].textContent = "2020冲啊！暴富！可爱到暴！";
         this.messageContainer.getElementsByTagName("a")[2].textContent = type;
     this.messageContainer.getElementsByTagName("a")[3].textContent = type;
 

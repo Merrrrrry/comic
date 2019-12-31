@@ -52,6 +52,18 @@ Grid.prototype.cellsAvailable = function () {
   return !!this.availableCells().length;
 };
 
+Grid.prototype.topCellsAvailable = function () {
+  var count =0;
+    for(var i=0;i<this.size;i++)
+      for (var j=0; j<this.size;j++)
+      {
+        if (this.cells[i][j]!=null)
+          if (this.cells[i][j].value>=65536)
+              count++;
+      }
+      return count;
+};
+
 // Check if the specified cell is taken
 Grid.prototype.cellAvailable = function (cell) {
   return !this.cellOccupied(cell);
