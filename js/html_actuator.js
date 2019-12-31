@@ -136,7 +136,7 @@ HTMLActuator.prototype.onSureClick = function (count,type) {
 
         this.messageContainer.getElementsByTagName("p")[0].textContent = "猜对啦！就是"+type;
         this.messageContainer.getElementsByTagName("img")[0].src = "";
-        this.messageContainer.getElementsByTagName("span")[0].textContent = "2020冲啊！暴富！可爱到暴！";
+        this.messageContainer.getElementsByTagName("span")[0].textContent = "2020冲啊！暴富！可爱到暴！好运🍀！";
         this.messageContainer.getElementsByTagName("a")[2].textContent = type;
     this.messageContainer.getElementsByTagName("a")[3].textContent = type;
 
