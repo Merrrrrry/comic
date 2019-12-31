@@ -32,15 +32,17 @@ GameManager.prototype.keepPlaying = function () {
 GameManager.prototype.sure = function () {
     console.log(this.count);
     this.keepPlaying = true;
-    this.count = this.actuator.onSureClick(this.count);
-    if (this.count>=50)
+    this.count = this.actuator.onSureClick(this.count,"蔡煜");
+    if (this.count>=2)
         this.actuator.continue();
 };
 
 GameManager.prototype.reject = function () {
     this.count = 0;
     this.keepPlaying = true;
-    this.actuator.continue();
+    this.count = this.actuator.onSureClick(this.count,'煜煜');
+    if (this.count>=2)
+        this.actuator.continue();
 };
 
 GameManager.prototype.newYear = function () {

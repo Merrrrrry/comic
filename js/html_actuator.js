@@ -132,36 +132,14 @@ HTMLActuator.prototype.message = function (won) {
         this.messageContainer.getElementsByTagName("img")[0].src = "./img/mit.jpg";
 };
 
-HTMLActuator.prototype.onSureClick = function (count) {
-    if (count == 0) {
-        this.messageContainer.getElementsByTagName("p")[0].textContent = "Merry with 猫猫！";
-        this.messageContainer.getElementsByTagName("img")[0].src = "./img/3.jpg";
-        this.messageContainer.getElementsByTagName("a")[2].textContent = "Cute";
-    }
-    if (count == 1) {
-        this.messageContainer.getElementsByTagName("p")[0].textContent = "Merry with 鹿鹿！";
-        this.messageContainer.getElementsByTagName("img")[0].src = "./img/5.jpg";
-        this.messageContainer.getElementsByTagName("a")[2].textContent = "Cuter";
+HTMLActuator.prototype.onSureClick = function (count,type) {
 
-    }
-    if (count == 2){
-        this.messageContainer.getElementsByTagName("p")[0].textContent = "";
+        this.messageContainer.getElementsByTagName("p")[0].textContent = "恭喜！就是"+type;
         this.messageContainer.getElementsByTagName("img")[0].src = "";
-        this.messageContainer.getElementsByTagName("span")[0].textContent = "Everyone Loves Merry Christmas!";
-        this.messageContainer.getElementsByTagName("a")[2].textContent = "Yes";
-    }
-    if (count == 3){
-        this.messageContainer.getElementsByTagName("span")[0].textContent = "And Everyone Loves Christmas!";
-        this.messageContainer.getElementsByTagName("a")[2].textContent = "Yes";
-    }
-    if (count ==7) {
-        this.messageContainer.getElementsByTagName("span")[0].textContent = "But Cy Loves Merry Only";
-        this.messageContainer.getElementsByTagName("a")[2].textContent = "Sure";
-    }
-    if (count ==20){
-        this.messageContainer.getElementsByTagName("span")[0].textContent = "It's not a joke";
-        this.messageContainer.getElementsByTagName("a")[2].textContent = "Agree";
-    }
+        this.messageContainer.getElementsByTagName("span")[0].textContent = "新年快乐！";
+        this.messageContainer.getElementsByTagName("a")[2].textContent = type;
+    this.messageContainer.getElementsByTagName("a")[3].textContent = type;
+
     count = count + 1;
     return count;
 };
