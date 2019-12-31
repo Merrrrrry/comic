@@ -58,7 +58,7 @@ Grid.prototype.topCellsAvailable = function () {
       for (var j=0; j<this.size;j++)
       {
         if (this.cells[i][j]!=null)
-          if (this.cells[i][j].value>=65536)
+          if (this.cells[i][j].value===65536)
               count++;
       }
       return count;
